@@ -4,7 +4,7 @@
       "Gisle Aas <gisle@activestate.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.141170",
+   "generated_by" : "ExtUtils::MakeMaker version 7.052, CPAN::Meta::Converter version 2.150003",
    "license" : [
       "perl_5"
    ],
@@ -36,20 +36,22 @@
          },
          "requires" : {
             "Compress::Raw::Zlib" : "0",
-            "IO::Compress::Gzip" : "0",
             "IO::Select" : "0",
             "IO::Socket::INET" : "0",
+            "IO::Uncompress::Gunzip" : "0",
             "URI" : "0",
             "perl" : "5.006002"
          }
       }
    },
-   "release_status" : "stable",
+   "release_status" : "unstable",
    "resources" : {
       "repository" : {
          "url" : "http://github.com/libwww-perl/net-http"
       },
       "x_MailingList" : "mailto:libwww@perl.org"
    },
-   "version" : "6.07"
+   "version" : "6.08_001",
+   "x_serialization_backend" : "JSON::PP version 2.27300"
 }
+
