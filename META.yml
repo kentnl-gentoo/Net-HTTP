@@ -6,7 +6,7 @@ build_requires:
   ExtUtils::MakeMaker: '0'
 configure_requires:
   ExtUtils::MakeMaker: '0'
-dynamic_config: 1
+dynamic_config: 0
 generated_by: 'ExtUtils::MakeMaker version 7.052, CPAN::Meta::Converter version 2.150003'
 license: perl
 meta-spec:
@@ -27,8 +27,10 @@ requires:
   URI: '0'
   perl: '5.006002'
 resources:
+  IRC: irc://irc.perl.org/#lwp
   MailingList: mailto:libwww@perl.org
-  repository: http://github.com/libwww-perl/net-http
-version: 6.08_001
+  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Net-HTTP
+  repository: https://github.com/libwww-perl/net-http.git
+version: 6.08_002
 x_serialization_backend: 'CPAN::Meta::YAML version 0.014'
 

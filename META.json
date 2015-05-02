@@ -3,7 +3,7 @@
    "author" : [
       "Gisle Aas <gisle@activestate.com>"
    ],
-   "dynamic_config" : 1,
+   "dynamic_config" : 0,
    "generated_by" : "ExtUtils::MakeMaker version 7.052, CPAN::Meta::Converter version 2.150003",
    "license" : [
       "perl_5"
@@ -46,12 +46,19 @@
    },
    "release_status" : "unstable",
    "resources" : {
-      "repository" : {
-         "url" : "http://github.com/libwww-perl/net-http"
+      "bugtracker" : {
+         "mailto" : "bug-Net-HTTP@rt.cpan.org",
+         "web" : "https://rt.cpan.org/Public/Dist/Display.html?Name=Net-HTTP"
       },
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/libwww-perl/net-http.git",
+         "web" : "https://github.com/libwww-perl/net-http"
+      },
+      "x_IRC" : "irc://irc.perl.org/#lwp",
       "x_MailingList" : "mailto:libwww@perl.org"
    },
-   "version" : "6.08_001",
+   "version" : "6.08_002",
    "x_serialization_backend" : "JSON::PP version 2.27300"
 }
 
