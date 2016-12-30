@@ -1,5 +1,19 @@
 Release history for Net-HTTP
 
+_______________________________________________________________________________
+6.10      2016-12-30 01:21:48-05:00 America/Toronto (TRIAL RELEASE)
+
+Karen Etheridge (4):
+      Added LICENSE
+      Added 'use warnings' to everywhere that lacked it
+      Drop all use of Test.pm
+      Removed unneeded uses of 'use vars'
+
+Andy Grundman (1):
+      Switch live tests to use Google.
+
+Lasse Makholm (1):
+      Fix RT#112313 - Hang in my_readline() when keep-alive => 1 and $reponse_size % 1024 == 0
 
 _______________________________________________________________________________
 2015-05-20 Net-HTTP 6.09
@@ -78,7 +92,7 @@ _______________________________________________________________________________
 
 Restore blocking override for Net::SSL [RT#72790]
 
-Restore perl-5.6 compatiblity.
+Restore perl-5.6 compatibility.
 
 
 _______________________________________________________________________________

@@ -1,13 +1,8 @@
 package Net::HTTP::Methods;
-
-require 5.005;  # 4-arg substr
-
+$Net::HTTP::Methods::VERSION = '6.10'; # TRIAL
 use strict;
-use vars qw($VERSION);
+use warnings;
 use URI;
-
-$VERSION = "6.09";
-$VERSION = eval $VERSION;
 
 my $CRLF = "\015\012";   # "\r\n" is not portable
 
@@ -279,6 +274,8 @@ sub my_readline {
                     if(defined $bytes_read) {
                         $new_bytes += $bytes_read;
                         last if $bytes_read < 1024;
+                        # We got exactly 1024 bytes, so we need to select() to know if there is more data
+                        last unless $self->can_read(0);
                     }
                     elsif($!{EINTR} || $!{EAGAIN} || $!{EWOULDBLOCK}) {
                         redo READ;
@@ -646,3 +643,30 @@ sub inflate_ok {
 } # BEGIN
 
 1;
+
+__END__
+
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+Net::HTTP::Methods
+
+=head1 VERSION
+
+version 6.10
+
+=head1 AUTHOR
+
+Gisle Aas <gisle@activestate.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2001-2016 by Gisle Aas.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
