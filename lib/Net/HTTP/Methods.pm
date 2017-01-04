@@ -1,5 +1,5 @@
 package Net::HTTP::Methods;
-$Net::HTTP::Methods::VERSION = '6.10'; # TRIAL
+$Net::HTTP::Methods::VERSION = '6.11';
 use strict;
 use warnings;
 use URI;
@@ -307,6 +307,7 @@ sub can_read {
     my $self = shift;
     return 1 unless defined(fileno($self));
     return 1 if $self->isa('IO::Socket::SSL') && $self->pending;
+    return 1 if $self->isa('Net::SSL') && $self->can('pending') && $self->pending;
 
     # With no timeout, wait forever.  An explicit timeout of 0 can be
     # used to just check if the socket is readable without waiting.
@@ -656,7 +657,7 @@ Net::HTTP::Methods
 
 =head1 VERSION
 
-version 6.10
+version 6.11
 
 =head1 AUTHOR
 
@@ -664,7 +665,7 @@ Gisle Aas <gisle@activestate.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2001-2016 by Gisle Aas.
+This software is copyright (c) 2001-2017 by Gisle Aas.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
