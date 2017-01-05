@@ -1,5 +1,5 @@
 package Net::HTTP::Methods;
-$Net::HTTP::Methods::VERSION = '6.11';
+$Net::HTTP::Methods::VERSION = '6.12';
 use strict;
 use warnings;
 use URI;
@@ -657,7 +657,7 @@ Net::HTTP::Methods
 
 =head1 VERSION
 
-version 6.11
+version 6.12
 
 =head1 AUTHOR
 

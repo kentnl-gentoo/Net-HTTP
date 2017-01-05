@@ -1,5 +1,5 @@
 package Net::HTTP;
-$Net::HTTP::VERSION = '6.11';
+$Net::HTTP::VERSION = '6.12';
 use strict;
 use warnings;
 
@@ -50,7 +50,7 @@ Net::HTTP - Low-level HTTP connection (client)
 
 =head1 VERSION
 
-version 6.11
+version 6.12
 
 =head1 SYNOPSIS
 
