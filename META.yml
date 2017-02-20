@@ -38,7 +38,7 @@ resources:
   bugtracker: https://github.com/libwww-perl/Net-HTTP/issues
   homepage: https://github.com/libwww-perl/Net-HTTP
   repository: https://github.com/libwww-perl/Net-HTTP.git
-version: '6.12'
+version: '6.13'
 x_contributors:
   - 'Adam Kennedy <adamk@cpan.org>'
   - 'Adam Sjogren <asjo@koldfront.dk>'
@@ -52,6 +52,7 @@ x_contributors:
   - 'Chase Whitener <cwhitener@gmail.com>'
   - 'Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>'
   - 'Daniel Hedlund <Daniel.Hedlund@eprize.com>'
+  - 'Dave Rolsky <autarch@urth.org>'
   - 'David E. Wheeler <david@justatheory.com>'
   - 'DAVIDRW <davidrw@cpan.org>'
   - 'David Steinbrunner <dsteinbrunner@pobox.com>'
@@ -95,6 +96,7 @@ x_contributors:
   - 'Slaven Rezic <slaven@rezic.de>'
   - 'Slaven Rezic <srezic@iconmobile.com>'
   - 'Spiros Denaxas <s.denaxas@gmail.com>'
+  - 'Steffen Ullrich <Steffen_Ullrich@genua.de>'
   - 'Steve Hay <SteveHay@planit.com>'
   - 'Todd Lipcon <todd@amiestreet.com>'
   - 'Tom Hukins <tom@eborcom.com>'
