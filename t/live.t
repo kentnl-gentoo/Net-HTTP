@@ -1,18 +1,18 @@
 BEGIN {
-    unless ( -f "t/LIVE_TESTS" || -f "LIVE_TESTS" ) {
-        print "1..0 # SKIP Live tests disabled; pass --live-tests to Makefile.PL to enable\n";
+    if ( $ENV{NO_NETWORK_TESTING} ) {
+        print "1..0 # SKIP Live tests disabled due to NO_NETWORK_TESTING\n";
         exit;
     }
     eval {
         require IO::Socket::INET;
         my $s = IO::Socket::INET->new(
-            PeerHost => "www.google.com:80",
+            PeerHost => "www.cpan.org:80",
             Timeout  => 5,
         );
         die "Can't connect: $@" unless $s;
     };
     if ($@) {
-        print "1..0 # SKIP Can't connect to www.google.com\n";
+        print "1..0 # SKIP Can't connect to www.cpan.org\n";
         print $@;
         exit;
     }
@@ -26,7 +26,7 @@ plan tests => 6;
 use Net::HTTP;
 
 my $s = Net::HTTP->new(
-    Host            => "www.google.com",
+    Host            => "www.cpan.org",
     KeepAlive       => 1,
     Timeout         => 15,
     PeerHTTPVersion => "1.1",
@@ -57,12 +57,9 @@ for ( 1 .. 2 ) {
         $buf .= $tmp;
     }
     $buf =~ s/\r//g;
-    
-    # ( my $out = $buf ) =~ s/^/# /gm;
-    # print $out;
 
-    is( $code,              "200" );
+    ok( $code == 302 || $code == 200, 'success' );
     like( $h{'Content-Type'}, qr{text/html} );
-    like( $buf, qr{</html>} );
+    like( $buf, qr{</html>}i );
 }
 
